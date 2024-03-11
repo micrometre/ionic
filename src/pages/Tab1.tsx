@@ -19,7 +19,8 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <Camera1Stream name="Tab 1 page" />
-        <AlprStremPlates name="Tab 1 page" />
+        <iframe src="http://127.0.0.1:5000/alprd1/mobile" ></iframe>
+
       </IonContent>
     </IonPage>
   );
