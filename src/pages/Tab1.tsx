@@ -1,5 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import Camera1Stream from '../components/Camera1Stream';
+import AlprStremPlates from '../components/AlprStrem';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -7,16 +9,17 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large"></IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <Camera1Stream name="Tab 1 page" />
+        <AlprStremPlates name="Tab 1 page" />
       </IonContent>
     </IonPage>
   );
