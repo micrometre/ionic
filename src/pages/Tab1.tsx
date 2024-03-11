@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import Camera1Stream from '../components/Camera1Stream';
-import AlprStremPlates from '../components/AlprStrem';
+import AlprStremPlates from '../components/AlprStream';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
