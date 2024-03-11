@@ -6,7 +6,7 @@ interface ContainerProps {
 
 const Camera1Stream: React.FC<ContainerProps> = () => {
   return (
-    <div >
+    <div className='container' >
       <img  src="http://192.168.1.127:8080/video" width="375" height="281"></img>
     </div>
   );

@@ -1,48 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import './ExploreContainer.css';
 import './AlprStream.css'
+
 interface ContainerProps {
   name: string;
 }
 
-function AlprStremPlates() {
-  const [state, setState] = useState([]);
-  useEffect(() => {
-    const evtSource = new EventSource("http://192.168.1.122:5000/alprd1/alprd1");
-    evtSource.addEventListener("myEventName", (event) => {
-      const myEvent = JSON.parse(event.data);
-      console.log(myEvent);
-      setState(myEvent);
-      console.log(JSON.parse(event.data));
-    });
-
-    evtSource.onmessage = (event) => {
-      const myEvent = JSON.parse(event.data);
-      console.log(myEvent);
-      setState(myEvent);
-    };
-
-    evtSource.onopen = (event) => {
-      console.log(event);
-    };
-
-    evtSource.onerror = () => {
-      evtSource.close();
-    };
-
-    return () => {
-      evtSource.close();
-    };
-  }, []);
-
+const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
   return (
-    <div className='stream'>
-      <h1>ALPR STREAM</h1>
-      <h1>
-        {state}
-      </h1>
+    <div className="container">
+       <iframe style={{
+          color: "#fff",
+          border: "1px solid #088413",
+          fontSize: 11,
+          fontWeight: "bold",
+          letterSpacing: 1,
+          borderRadius: 4,
+          padding: "4px 6px",
+          display: "inline-block",
+          position: "relative",
+          top: -2,
+          marginLeft: 10,
+          lineHeight: 1,
+        
+       }} src="http://127.0.0.1:5000/alprd1/mobile" ></iframe> 
     </div>
   );
+};
 
-}
-
-export default AlprStremPlates;
+export default ExploreContainer;
