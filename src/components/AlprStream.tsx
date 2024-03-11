@@ -22,7 +22,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
           marginLeft: 10,
           lineHeight: 1,
         
-       }} src="http://127.0.0.1:5000/alprd1/mobile" ></iframe> 
+       }} src="http://192.168.1.122:5000/alprd1/mobile" ></iframe> 
     </div>
   );
 };

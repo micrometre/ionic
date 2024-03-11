@@ -21,7 +21,21 @@ const Tab1: React.FC = () => {
         <Camera1Stream name="Tab 1 page" />
         <AlprStremPlates name="Tab 1 page" />
 
-        <iframe src="http://127.0.0.1:5000/alprd1/mobile" ></iframe>
+        <iframe style={{
+            top: "70%",
+            color: "#fff",
+            backgroundColor: "#088413",
+            border: "1px solid #088413",
+            fontSize: 11,
+            fontWeight: "bold",
+            letterSpacing: 1,
+            borderRadius: 4,
+            padding: "4px 6px",
+            display: "inline-block",
+            position: "relative",
+            marginLeft: 30,
+            lineHeight: 1,
+        }} src="http://192.168.1.122:5000/alprd1/mobile" ></iframe>
       </IonContent>
     </IonPage>
   );
