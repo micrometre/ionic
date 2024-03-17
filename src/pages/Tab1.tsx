@@ -19,7 +19,6 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <Camera1Stream name="Tab 1 page" />
-        <AlprStremPlates name="Tab 1 page" />
 
         <iframe style={{
             top: "70%",

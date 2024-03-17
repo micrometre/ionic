@@ -5,8 +5,12 @@ const config: CapacitorConfig = {
   appName: 'photo-gallery',
   webDir: 'dist',
   server: {
-    androidScheme: 'https'
-  }
+    androidScheme: 'http'
+  },
+  android: {
+    allowMixedContent: true,
+
+  },
 };
 
 export default config;
