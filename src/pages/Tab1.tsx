@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import Camera1Stream from '../components/Camera1Stream';
 import AlprStremPlates from '../components/AlprStream';
@@ -18,6 +18,8 @@ const Tab1: React.FC = () => {
             <IonTitle size="large"></IonTitle>
           </IonToolbar>
         </IonHeader>
+
+
         <Camera1Stream name="Tab 1 page" />
 
         <iframe style={{
@@ -35,7 +37,8 @@ const Tab1: React.FC = () => {
             marginLeft: 30,
             lineHeight: 1,
         }} src="http://192.168.1.122:5000/alprd1/mobile" ></iframe>
-      </IonContent>
+        <IonButton color={'primary'}> <a href="http://127.0.0.1:5000/alprd1/download"></a>Export CSV</IonButton>
+      </IonContent> 
     </IonPage>
   );
 };
